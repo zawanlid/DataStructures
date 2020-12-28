@@ -8,6 +8,26 @@ import java.util.Queue;
 public class AppQueue {
     public static void main(String[] args) {
 
+        AppQueue aq = new AppQueue();
+
+        aq.testQWTS();
+
+
+    }
+
+    private void testQWTS () {
+        QueueWithTwoStack<String> qwts = new QueueWithTwoStack<>();
+
+        qwts.add("one");
+        qwts.add("two");
+        System.out.println(qwts.remove());
+        System.out.println(qwts.remove());
+
+        qwts.add("three");
+        System.out.println(qwts.remove());
+    }
+
+    private void testMyCircularArrayQueue () {
         MyCircularArrayQueue<Integer> queue = new MyCircularArrayQueue<Integer>(5);
 
         queue.enqueue(10);
